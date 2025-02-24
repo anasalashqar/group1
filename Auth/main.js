@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let x = [1, 2, 3, 4, 5];
+  let y = 0;
+  while (x[y] !== undefined) {
+    y++;
+  }
+  for (; --y >= 0; ) {
+    console.log(x[y]);
+  }
+
+  const user = {
+    key: "user",
+    name: "John Doe",
+    logedin: false,
+    favorites: [],
+    workouts: [],
+  };
+
   const one = document.getElementById("one");
   const two = document.getElementById("two");
   const r = JSON.parse(localStorage.getItem("append")) || 1;
@@ -68,6 +85,8 @@ document.getElementById("form1").addEventListener("submit", (event) => {
     password.length > 8 &&
     email !== loc.email
   ) {
+    document.getElementById("answer").innerHTML = "Form Submitted!";
+    document.getElementById("answer").style.color = "green";
     // Retrieve existing users from localStorage
     let users = JSON.parse(localStorage.getItem("user"));
 
@@ -123,7 +142,7 @@ document.getElementById("form2").addEventListener("submit", (event) => {
   // Retrieve users array from localStorage
   let users = JSON.parse(localStorage.getItem("user")) || [];
   console.log(users.length);
-  
+
   // Check if users array is empty
   if (users.length === 0) {
     document.getElementById("answer2").style.color = "red";

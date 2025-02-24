@@ -1,4 +1,22 @@
+"use strict";
 document.addEventListener("DOMContentLoaded", () => {
+  // const storage = JSON.parse(localStorage.getItem("user"));
+  // console.log(storage)
+
+  // localStorage.setItem("user",JSON.stringify("HI"));
+
+  user.name;
+
+  const name = ["df", true, 278784, 474.45];
+
+  name[2];
+
+  function addwdhfbdwfjiuh() {
+    c = a + b;
+  }
+
+  let s = addwdhfbdwfjiuh();
+
   let fetchedArray;
   fetch("https://api.jsonbin.io/v3/b/67a743fead19ca34f8fc0f96", {
     method: "GET",
@@ -9,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
     .then((res) => {
       return res.json();
+      // JSON.parse(res)
     })
     .then((data) => {
       console.log("Fetched data:", data); // Added
@@ -46,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, {});
 
     const cardData = groupedClasses;
+    console.log(cardData);
+
     const cards = cardData[day] || [];
     cardContainer.innerHTML = "";
 
@@ -82,7 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </p>
                 <p class="card-title">${cards[i].className}</p>
                 <p class="card-text">
-                  <small>By ${cards[i].trainer}, ${cards[i].duration}</small>
+                  <small>By ${cards[i].trainer}, ${
+        cards[i].duration
+      } minutes</small>
                 </p>
               </div>
               <div class="col-2 d-flex py-4 px-4 justify-content-end favoriteContainer">

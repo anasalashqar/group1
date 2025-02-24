@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </p>
                 <p class="card-title">${card.className}</p>
                 <p class="card-text">
-                  <small>By ${card.trainer}, ${card.duration}</small>
+                  <small>By ${card.trainer}, ${card.duration} minutes</small>
                 </p>
               </div>
               <div class="col-2 d-flex py-4 px-4 justify-content-end favoriteContainer">

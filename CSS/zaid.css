@@ -181,7 +181,7 @@ h6 {
 
 .zaid-container {
   max-width: 98vw;
-  height: 50vh;
+  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -201,6 +201,7 @@ h2 span {
 /* cards Box Styling */
 .y-us-cards-cont {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 50px;
   flex-wrap: wrap;
